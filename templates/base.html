@@ -72,7 +72,7 @@
 							<li {% if p == page.title %}class="active"{% endif %}><a href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a></li>
 						{% endfor %}
 
-						<li><label>Places</label></li>
+						<li><label>Links</label></li>
 							{% for name, link in LINKS %}
 							<li><a href="{{ link }}">{{ name }}</a></li>
 							{% endfor %}
@@ -141,7 +141,7 @@
 							</div>
 
 							<div class="panel">
-								<h5>Places</h5>
+								<h5>Links</h5>
 								<ul class="side-nav">
 									{% for name, link in LINKS %}
 									<li><a href="{{ link }}">{{ name }}</a></li>
