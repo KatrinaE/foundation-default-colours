@@ -68,8 +68,8 @@
 					<ul class="off-canvas-list">
 						<li><a href="{{ SITEURL }}">Home</a></li>
 						<li><label>Categories</label></li>
-						{% for cat, articles in categories %}
-							<li {% if cat == category %}class="active"{% endif %}><a href="{{ SITEURL }}/{{ cat.url }}">{{ cat }}</a></li>
+						{% for p in pages %}
+							<li {% if p == page.title %}class="active"{% endif %}><a href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a></li>
 						{% endfor %}
 
 						<li><label>Places</label></li>
