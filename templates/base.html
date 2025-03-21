@@ -85,11 +85,6 @@
 								{% endfor %}
 							{% endfor %}
 						{% endif %}
-
-						<li><label>Links</label></li>
-							{% for name, link in SOCIAL|sort %}
-							<li><a href="{{ link }}">{{ name }}</a></li>
-							{% endfor %}
 					</ul>	
 				</aside>
 
@@ -155,14 +150,6 @@
 							</div>
 							{% endif %}
 
-							<div class="panel">
-								<h5>Links</h5>
-								<ul class="side-nav">
-									{% for name, link in SOCIAL|sort %}
-									<li><a href="{{ link }}">{{ name }}</a></li>
-									{% endfor %}
-								</ul>
-							</div>
 						</aside>
 						<!-- End Sidebar -->
 					</div>
