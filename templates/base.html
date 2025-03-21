@@ -77,13 +77,6 @@
 							<li><a href="{{ link }}">{{ name }}</a></li>
 							{% endfor %}
 
-						{% if FOUNDATION_TAGS_IN_MOBILE_SIDEBAR %}
-						<li><label>Tags</label></li>
-							{% for tag, articles in tags|sort %}
-							<li><a href="{{ SITEURL }}/{{ tag.url|replace(' ', '-') }}">{{ tag }}</a></li>
-							{% endfor %}
-						{% endif %}
-
 						{% if MONTH_ARCHIVE_SAVE_AS %}
 						<li><label>Monthly Archives</label></li>
 							{% for year, date_year in dates|groupby( 'date.year' )|sort(reverse=True) %}
@@ -145,15 +138,6 @@
 								<ul class="side-nav">
 									{% for name, link in LINKS %}
 									<li><a href="{{ link }}">{{ name }}</a></li>
-									{% endfor %}
-								</ul>
-							</div>
-
-							<div class="panel">
-								<h5>Tags</h5>
-								<ul class="tag-cloud">
-									{% for tag in tag_cloud %}
-									<li><a href="/tag/{{ tag.0|lower|replace(' ', '-') }}/" class="tag-{{ tag.1 }}">{{ tag.0 }}</a></li>
 									{% endfor %}
 								</ul>
 							</div>
