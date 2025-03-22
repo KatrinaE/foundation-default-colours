@@ -2845,7 +2845,8 @@ ul.pagination {
     font-size: 0.875rem; }
     .side-nav li a {
       display: block;
-      color: #008cba; }
+      color: #008cba;
+      text-decoration: underline; }
     .side-nav li.active > a:first-child {
       color: #4d4d4d;
       font-weight: normal;
@@ -2924,7 +2925,7 @@ td {
 /* Default Link Styles */
 a {
   color: #008cba;
-  text-decoration: none;
+  text-decoration: underline;
   line-height: inherit; }
   a:hover, a:focus {
     color: #0079a1; }
