@@ -2,9 +2,9 @@
 
 {% block content %}
 <article>
-	<h2>{{ article.title }}</h2>
+    <h2>{{ article.title }}</h2>
+  	<h6>Written by <a href="{{ SITEURL }}/author/{{ article.author|lower|replace(' ', '-') }}.html">{{ article.author }}</a> on {{ article.locale_date }}.</h6>
 	{{ article.content }}
-	<h6>Written by <a href="{{ SITEURL }}/author/{{ article.author|lower|replace(' ', '-') }}.html">{{ article.author }}</a> on {{ article.locale_date }}.</h6>
 </article>
 
 {% if DISQUS_SITENAME %}
