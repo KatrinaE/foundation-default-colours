@@ -101,9 +101,9 @@
 					<section class="top-bar-section">
 						<ul class="left">
 							{% for p in pages %}
-						            <li {% if p == category %}class="active"{% endif %}><a href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a></li>
+						            <li {% if p == category %}class="active"{% endif %}><a style="text-decoration:none;" href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a></li>
 							{% endfor %}
-							    <li><a href="{{ SITEURL }}/archives.html">Archives</a>
+							    <li><a style="text-decoration:none;" href="{{ SITEURL }}/archives.html">Archives</a>
 						</ul>
 					</section>
 				</nav>
