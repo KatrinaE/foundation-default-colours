@@ -42,6 +42,10 @@ body {
   position: relative;
   cursor: default; }
 
+#pagetitle {
+  font-family: Agbalumo;
+  text-decoration: none;  }
+
 a:hover {
   cursor: pointer; }
 
