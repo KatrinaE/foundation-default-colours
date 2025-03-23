@@ -1,17 +1,12 @@
 {% extends "base.html" %}
 {% block content %}
 
+<h3>Articles</h3>
 {# show summaries of the latest articles #}
 {% if articles %}
 {% for article in (articles_page.object_list if articles_page else articles) %}
 <article>
-	<h3><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h3>
-	<h6>Written by <a href="{{ SITEURL }}/author/{{ article.author|lower|replace(' ', '-') }}.html">{{ article.author }}</a> on {{ article.locale_date }}.</h6>
-	{{ article.content if FOUNDATION_FRONT_PAGE_FULL_ARTICLES else article.summary }}
-	{% if not FOUNDATION_FRONT_PAGE_FULL_ARTICLES %}
-		{# add a 'Continue reading' link if we're displaying summaries #}
-		<p class="continue"><a href="{{ SITEURL }}/{{ article.url }}">Continue reading &raquo;</a></p>
-	{% endif %}
+	<h6><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a> - {{ article.date.strftime('%B %-d, %Y') }}</h6>
 </article>
 <hr />
 {% endfor %}
